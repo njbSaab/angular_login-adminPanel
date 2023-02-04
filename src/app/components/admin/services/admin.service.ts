@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http'
-import { User } from './user';
+import { User } from '../user';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,6 @@ export class AdminService {
   }
 
   getPerson(id: number){
-     return this.http.get<User>(`https://jsonplaceholder.typicode.com/users${id}`)
+     return this.http.get<User>(`https://jsonplaceholder.typicode.com/users/${id}`)
   }
 }

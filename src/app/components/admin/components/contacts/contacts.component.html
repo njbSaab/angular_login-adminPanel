@@ -1,3 +1,6 @@
+<div class="progress" *ngIf="isLoading | async">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+</div>
 
 <div class="col-4 mx-2 mt-2">
    <div
@@ -10,9 +13,6 @@
          <h5>
            {{user.name}}
          </h5>
-         <p>
-           {{user.email}}
-         </p>
          <button class="btn btn-success" [routerLink]="['user', user.id]">
            Details
          </button>
